@@ -30,7 +30,10 @@ define("TITLE_acme_review", _("ACME Review"));
 function proj_cmp($rowa, $rowb)
 {
   $key1 = $rowb['count'] - $rowa['count'];
-  if ($key1) return $key1;
+  if ($key1)
+  {
+    return $key1;
+  }
 
   // secondary key - project_name ascending
   return (strnatcasecmp($rowa['project_name'], $rowb['project_name']));
